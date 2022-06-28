@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m 'fourth task, hot fix'
+git commit -m 'sixth task, +'
 git push
