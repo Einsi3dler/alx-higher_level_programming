@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m 'task three,'
+git commit -m 'task four,+:'
 git push
