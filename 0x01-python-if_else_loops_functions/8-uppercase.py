@@ -5,8 +5,7 @@ def uppercase(str):
         if a == 32 or (a >= 65 and a <= 90) or (a >= 48 and a <= 57):
             a = chr(a)
         else:
-           a = a - 32
-           a = chr(a)
+            a = a - 32
+            a = chr(a)
         print("{}".format(a), end="")
     print("")
-
