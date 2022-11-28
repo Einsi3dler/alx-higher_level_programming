@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 str = "Holberton School"
-strMul = 5 * str
+strMul = 3 * str
 print(strMul)
 print(str[:9])
