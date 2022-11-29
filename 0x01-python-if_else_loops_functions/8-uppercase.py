@@ -9,4 +9,4 @@ def uppercase(str):
             final = final + alpha_var
         else:
             final = final + c
-    print(final)
+    print("{}".format(final))
