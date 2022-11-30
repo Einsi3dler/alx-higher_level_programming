@@ -6,17 +6,30 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *head;
+	listint_t *Mhead;
+	listint_t *Shead;
 
-	head = list;
+	Shead = list;
+	Mhead = list;
 
-	while (head != NULL)
+	while (Mhead != NULL)
 	{
-		head = head->next;
-		if (head == list)
+		int i;
+
+		for (i = 0; i < 3; i++)
+		{
+			Mhead = Mhead->next;
+			if (Mhead == NULL)
+			{
+				return (0);
+			}
+		}
+		Shead = Shead->next;
+		if (Shead == Mhead)
 		{
 			return (1);
 		}
+
 	}
 	return (0);
 }
