@@ -5,11 +5,17 @@ if __name__ == "__main__":
     if cl_int_leng-1 == 0:
         print("{} arguments.".format(cl_int_leng-1))
     else:
-        print("{} arguments:".format(cl_int_leng-1))
+        if cl_int_leng < 3:
+            print("{} argument:".format(cl_int_leng-1))
+        else:
+            print("{} arguments:".format(cl_int_leng-1))
         num = 0
         for val in sys.argv:
             if num == 0:
                 pass
+            elif num == 1:
+                 if cl_int_leng - 1 == 1:
+                     print("{}: {}".format(num,val))
             else:
                 print("{}: {}".format(num, val))
             num = num + 1
