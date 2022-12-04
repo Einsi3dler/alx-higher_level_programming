@@ -1,3 +1,6 @@
 #!/usr/bin/python3
-for x in range(0,-1,-1):
-    print(x)
+a = "my name is manta ray"
+for x in a:
+    if x == 'm':
+        a.remove(x)
+print(a)
