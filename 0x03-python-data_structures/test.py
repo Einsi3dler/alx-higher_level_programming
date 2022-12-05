@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-a = "my name is manta ray"
-for x in a:
-    if x == 'm':
-        a.remove(x)
-print(a)
+my_list = [1, 90, 2, 13, 34, 5, -13, 3]
+my_list.sort()
+print(my_list)
