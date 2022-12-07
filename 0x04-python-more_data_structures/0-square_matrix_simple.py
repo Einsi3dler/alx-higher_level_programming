@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     if matrix is None:
-        pass
+        return
     else:
         res_arr = []
         for sub_arr in matrix:
