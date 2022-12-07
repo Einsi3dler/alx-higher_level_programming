@@ -7,7 +7,7 @@ def best_score(a_dictionary):
     else:
         val = [0,0]
         for k,v in a_dictionary.items():
-            if v => val[1]:
+            if v >= val[1]:
                 val[0] = k
                 val[1] = v
             else:
