@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-a = 0 + 2
-print(a)
+y = lambda x,z: x if x > z else z
+print(y(4,1))
