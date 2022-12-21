@@ -16,9 +16,32 @@ class Square:
         self.__position = position
 
     @property
+    def position(self):
+        """
+        This is a getter method
+        """
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """
+        this a setter for position
+        """
+        if type(value) != tuple:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif (type(value[0]) != int) or (type(value[1]) != int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
+
+    @property
     def size(self):
         """
-        This is a getter method for the square size
+        This is a getter method
         """
         return self.__size
 
@@ -33,26 +56,6 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
-
-    @property
-    def value(self):
-        """
-        This is a getter method for the coordinate value
-        """
-        return self.__position
-
-    @position.setter
-    def position(self, value):
-        if type(value) != tuple:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif (type(value[0]) != int) or (type(value[1]) != int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif value[0] < 0 or value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = value
 
     def area(self):
         """
@@ -70,9 +73,12 @@ class Square:
         if val == 0:
             print()
             return
-        for x in ra/nge(val):
-            for z in range(bal):
-                print(" ", end="")
+        for x in range(val):
+            for z in range(bal[0]):
+                if bal[1] < 0:
+                    print(" ", end="")
+                else:
+                    print("_", end="")
             for y in range(val):
                 print(f"#", end="")
             print()
