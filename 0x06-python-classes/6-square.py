@@ -79,10 +79,10 @@ class Square:
             return
         for x in range(val):
             for z in range(bal[0]):
-                if bal[1] < 0:
-                    print(" ", end="")
-                else:
+                if bal[1] > 0:
                     print("_", end="")
+                else:
+                    print(" ", end="")
             for y in range(val):
                 print(f"#", end="")
             print()
