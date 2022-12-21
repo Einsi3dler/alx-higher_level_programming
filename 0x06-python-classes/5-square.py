@@ -45,6 +45,9 @@ class Square:
         This file prints a representation of a square with #
         """
         val = self.__size
+        if val == 0:
+            print()
+            return
         for x in range(val):
             for y in range(val):
                 print(f"#", end="")
