@@ -12,8 +12,8 @@ class Square:
         """
         this initializes the square and validates the value
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def position(self):
@@ -27,16 +27,20 @@ class Square:
         """
         this a setter for position
         """
-        if type(value) != tuple:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif (type(value[0]) != int) or (type(value[1]) != int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif value[0] < 0 or value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
+        err = "position must be a tuple of 2 positive integers"
+        if type(value) == tuple:
+            if len(value) == 2:
+                if (type(value[0]) == int) and (type(value[1]) == int):
+                    if (value[0] >= 0) and (value[1] >= 0):
+                        self.__position = value
+                    else:
+                        raise TypeError(err)
+                else:
+                    raise TypeError(err)
+            else:
+                raise TypeError(err)
         else:
-            self.__position = value
+            raise TypeError(err)
 
     @property
     def size(self):
