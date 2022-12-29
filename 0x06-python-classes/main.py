@@ -1,17 +1,12 @@
 #!/usr/bin/python3
-Square = __import__('6-square').Square
+LinkedList = __import__('test').LinkedList
+Node = __import__('test').Node
 
-my_square_1 = Square(3)
-my_square_1.my_print()
-
-print("--")
-
-my_square_2 = Square(3, (1, 1))
-my_square_2.my_print()
-
-print("--")
-
-my_square_3 = Square(3, (3, 0))
-my_square_3.my_print()
-
-print("--")
+llist = LinkedList()
+llist.topIns(2)
+llist.topIns(3)
+llist.topIns(4)
+llist.topIns(5)
+print(llist)
+llist.Ins(4)
+print(llist)
