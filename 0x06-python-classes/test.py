@@ -32,13 +32,11 @@ class LinkedList(Node):
             self.head = new_node
             new_node.next = temp
     
-    def Ins(self, value):
-        temp = self.head
-        new = Node(value)
-
+    def Ins(self, target_node_data, new_node):
+        prev_node = self.head
         for node in self:
-            if node.data > value:
-                temp.next = new
-                new.next = node
+            if node.data > target_node_data:
+                prev_node.next = new_node
+                new_node.next = node
                 return
-            temp = node
+            prev_node = node
