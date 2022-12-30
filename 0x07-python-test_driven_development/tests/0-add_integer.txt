@@ -1,0 +1,22 @@
+The test Module
+==========================
+
+using the add function
+___________________________
+
+This tests the function add for various functionalities
+_______________________________________________________
+
+Case #1 (addition results with int and float)
+::
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(2, 4)
+	6
+	>>> add_integer(100, 100)
+	200
+	>>> add_integer(-20, 100)
+	80
+	>>> add_integer(-20, -20)
+	-40
+	>>> a = add_integer(20.1, 20.5)
+	40
