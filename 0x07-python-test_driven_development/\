@@ -1,8 +1,0 @@
-#!/usr/bin/python3
-matrix = [[1], [2], [3]]
-arr = [[] for x in range(len(matrix))]
-
-for arr1, arr2 in matrix, arr:
-    for num in matrix:
-        arr1.append(num + 1)
-print(arr)
