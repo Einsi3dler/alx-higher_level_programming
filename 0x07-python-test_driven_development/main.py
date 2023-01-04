@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-say_my_name = __import__('3-say_my_name').say_my_name
+text_indentation = __import__('5-text_indentation').text_indentation
 
-say_my_name("John", "Smith")
-say_my_name("Walter", "White")
-say_my_name("Bob")
-say_my_name("bas", 12)
+text_indentation()

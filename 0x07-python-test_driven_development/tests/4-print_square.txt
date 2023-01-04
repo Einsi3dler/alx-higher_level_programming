@@ -1,0 +1,37 @@
+This text document contains a test for a function for a doc of the same name
+____________________________________________________________________________
+::
+	>>> print_square = __import__('4-print_square').print_square
+	>>> print_square(4)
+	####
+	####
+ 	####
+	####
+	>>> print_square(10)
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	>>> print_square(0)
+	>>> print_square(1)
+	#
+	>>> print_square('str')
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+	>>> print_square(-1)
+	Traceback (innermost last):
+		...
+	ValueError: size must be >= 0
+	>>> print_square()
+	Traceback (most recent call last):
+  	 File "./main.py", line 10, in <module>
+    	  print_square()
+	TypeError: print_square() missing 1 required positional argument: 'size'
+
