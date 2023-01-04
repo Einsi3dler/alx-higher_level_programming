@@ -33,3 +33,11 @@ Case #1 (addition results with int and float)
 	Traceback (innermost last):
 		...
 	TypeError: add_integer() missing 1 required positional argument: 'a'
+	>>> add_integer(float('nan'))
+	Traceback (most recent call last):
+		...
+	ValueError: cannot convert float NaN to integer
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
