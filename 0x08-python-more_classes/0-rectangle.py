@@ -2,6 +2,8 @@
 """
 This module contains an empty class
 """
+
+
 class Rectangle:
     """
     Empty Class
