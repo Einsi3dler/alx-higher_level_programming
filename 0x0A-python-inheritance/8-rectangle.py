@@ -14,6 +14,6 @@ class Rectangle(BaseGeometry):
         This intializatiop use a function from the inherited class
         """
         super().integer_validator("width", width)
-        super().integer_validator("Height", height)
+        super().integer_validator("height", height)
         self.__width = width
         self.__height = height
