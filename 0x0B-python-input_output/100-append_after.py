@@ -2,6 +2,8 @@
 """
 This module contains a single function
 """
+
+
 def append_after(filename="", search_string="", new_string=""):
     """
     This searches a file for a str and place a new str undee
