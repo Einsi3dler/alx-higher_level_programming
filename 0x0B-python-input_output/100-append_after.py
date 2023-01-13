@@ -16,5 +16,5 @@ def append_after(filename="", search_string="", new_string=""):
     for num in lines:
         contents.insert(num+flg, f"{new_string}")
         flg = flg + 1
-    with open(filename, 'a') as f:
+    with open(filename, 'w') as f:
         f.writelines(contents)
