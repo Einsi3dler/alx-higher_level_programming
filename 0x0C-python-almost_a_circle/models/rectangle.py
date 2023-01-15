@@ -21,10 +21,16 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """
+        getter for width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """
+        setter for width
+        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -33,10 +39,16 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """
+        getter for height
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """
+        setter for height
+        """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -45,10 +57,16 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """
+        getter for x
+        """
         return self.__x
 
     @x.setter
     def x(self, value):
+        """
+        setter for x
+        """
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -57,10 +75,16 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """
+        getter for y
+        """
         return self.__y
 
     @y.setter
     def y(self, value):
+        """
+        setter for y
+        """
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -68,9 +92,15 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """
+        returns the area of the rect
+        """
         return self.__width * self.__height
 
     def display(self):
+        """
+        representation of the rect in #
+        """
         for val in range(self.__height):
             if self.__x > 0:
                 print(" " * self.__x, end="")
@@ -79,6 +109,9 @@ class Rectangle(Base):
             print()
 
     def update(self, *args, **kwargs):
+        """
+        updates the instance
+        """
         
         flg = 0
         if (kwargs is not None):
