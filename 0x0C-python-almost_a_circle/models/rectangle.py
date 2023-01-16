@@ -117,7 +117,7 @@ class Rectangle(Base):
         """
         
         flg = 0
-        if args is not None:
+        if len(args) == 0:
             for key,value in kwargs.items():
                 self.__setattr__(key, value)
         else:
