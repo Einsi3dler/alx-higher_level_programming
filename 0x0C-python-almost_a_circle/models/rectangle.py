@@ -101,6 +101,9 @@ class Rectangle(Base):
         """
         representation of the rect in #
         """
+        if self.y > 0:
+            for z in range(self.__y):
+                print()
         for val in range(self.__height):
             if self.__x > 0:
                 print(" " * self.__x, end="")
@@ -114,12 +117,9 @@ class Rectangle(Base):
         """
         
         flg = 0
-        if (kwargs is not None):
-            self.id = kwargs[id]
-            self.width = kwargs[width]
-            self.height = kwargs[height]
-            self.x = kwargs[x]
-            self.y = kwargs[y]
+        if args is not None:
+            for key,value in kwargs.items():
+                self.__setattr__(key, value)
         else:
             for val in args:
                 if flg == 0:
