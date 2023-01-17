@@ -39,10 +39,32 @@ class Base:
                 f.write("[]")
             else:
                 list_dict = [o.to_dictionary() for o in  list_objs]
-                f.write(cls.to_json_string(list_dict))
+                f.write(Base.to_json_string(list_dict))
 
     @classmethod
     def create(cls, **dictionary):
+        """
+        """
+        if dictionary is not None and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            new.update(**dictionary)
+            return new
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        """
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as f:
+                list_dic = Base.from_json_string(f.read())
+                return [cls.create(**d) for d in list_dic]
+        except IOError:
+            return []
+            
     
     @staticmethod
     def from_json_string(json_string):
