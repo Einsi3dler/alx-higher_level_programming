@@ -134,6 +134,14 @@ class Rectangle(Base):
                     self.y = val
                 flg = flg + 1
 
+    def to_dictionary(self):
+        """
+        """
+        return {"id":getattr(self, "id"),
+                "x": getattr(self, "x"),
+                "y": getattr(self, "y"),
+                "height": getattr(self, "height"),
+                "width": getattr(self, "width")}
 
     def __str__(self):
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")

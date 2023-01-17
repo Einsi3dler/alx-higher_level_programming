@@ -40,13 +40,20 @@ class Square(Rectangle):
             return 
         try:
             self.id = args[0]
-            self.width = args[1]
-            self.height = args[1]
+            self.size = args[1]
             self.x = args[2]
             self.y = args[3]
         except:
             pass
 
+    def to_dictionary(self):
+        """
+        this in tes
+        """
+        return {"id": getattr(self, "id"),
+                "size": getattr(self, "width"),
+                "x": getattr(self, "x"),
+                "y": getattr(self, "y")}
 
     def __str__(self):
         """
