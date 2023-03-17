@@ -4,7 +4,7 @@ function myarr (arr) {
   if (arrLen <= 1) {
     return (0);
   } else {
-    arr.sort();
+    arr.sort(function (a, b) { return a - b; });
     return (arr[arrLen - 2]);
   }
 }
