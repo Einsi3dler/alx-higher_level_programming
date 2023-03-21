@@ -13,8 +13,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     instance = session.query(State).order_by(State.id).\
-            filter(State.name == argv[4]).first()
-    if (instance == None):
+        filter(State.name == argv[4]).first()
+    if instance is None:
         print("Not found")
     else:
         print(instance.id)
