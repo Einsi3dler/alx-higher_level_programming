@@ -13,9 +13,9 @@ if __name__ == "__main__":
     engine = create_engine(engineCon, pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    query = session.query(City.id, City.name, State.name).\
-            join(State, City.state_id == State.id).\
-            order_by(City.id.asc())
+    query = session.query(City.id, City.name, State.name)\
+            .join(State, City.state_id == State.id)\
+            .order_by(City.id.asc())
     result = query.all()
     for row in result:
         print(f"{row[2]}: ({row[0]}) {row[1]}")
