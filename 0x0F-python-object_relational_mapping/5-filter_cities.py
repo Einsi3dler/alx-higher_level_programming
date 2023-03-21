@@ -22,9 +22,10 @@ if __name__ == "__main__":
     x = 0
     for row in query_rows:
         if x == len(query_rows) - 1:
-            print(row[1])
+            print(row[1], end="")
             break
         print(row[1], end=", ")
         x = x+1
+    print()
     cursor.close()
     db.close()
