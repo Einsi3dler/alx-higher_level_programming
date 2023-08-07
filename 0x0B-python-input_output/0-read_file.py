@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module contains a singular function that reads files
+This module contains a singular function that reads files more 
 """
 
 
