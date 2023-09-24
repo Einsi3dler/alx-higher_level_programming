@@ -1,1 +1,1 @@
-This directory contains excersises solved under the project hello world
+This directory contains excersises solved under the projefddfct hello world
